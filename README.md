@@ -3,6 +3,8 @@
 ## Problem
 
 - We have an API server.
+- We want to provide SDKs for multiple languages, so that more developers can easily interact with our API (who wants 
+  to write raw, untyped HTTP requests?!).
 - Maintaining SDKs for multiple languages is a pain, because type bindings and documentation need to be kept in sync.
 
 ## Solution
