@@ -1,0 +1,35 @@
+{
+  "name": "repo",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "postinstall": "pnpm generate",
+    "generate": "openapi-ts",
+    "prebuild": "pnpm generate",
+    "build": "tsc -b tsconfig.json",
+    "pretest": "pnpm generate",
+    "test": "vitest run -r src --testTimeout 25000",
+    "clean": "rm -rf dist src/generated"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@hey-api/openapi-ts": "^0.53.10",
+    "@types/node": "^20.0.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
+  },
+  "engines": {
+    "node": "^20.16.0",
+    "pnpm": "^9.6.0"
+  },
+  "packageManager": "pnpm@9.6.0",
+  "dependencies": {
+    "@hey-api/client-fetch": "^0.4.1"
+  }
+}
